@@ -1,5 +1,6 @@
 package com.springboot.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +22,7 @@ import javax.persistence.TemporalType;
 @Table(name="OA_ID_USER",
 		indexes={@Index(columnList="name", name="IDX_USER_NAME")})
 //@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
-public class User {
+public class User implements Serializable{
 
 	@Id
 	private String user_id;
